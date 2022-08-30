@@ -21,7 +21,7 @@ const defaultLogin={
 const ModalDialog = ({ open, handleClose }:any) => {
   return (
     // props received from App.js
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog open={open} onClose={handleClose} className="dailog-box">
      <SignUpForm/>
     </Dialog>
   );
@@ -48,7 +48,7 @@ await  googleSignIn()
 navigate("/dashboard")
 }
 catch(error:any){
-  setError(error.code)
+  console.log(error.code)
 }
 
    }
