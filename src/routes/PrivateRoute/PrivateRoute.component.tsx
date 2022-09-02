@@ -9,7 +9,7 @@ let {user} = useUserAuth()
 console.log(user, "private route")
 
      if(!user){
-     return <Navigate to="/"/>
+     return <Navigate to="/auth"/>
      }
      else{
         return children

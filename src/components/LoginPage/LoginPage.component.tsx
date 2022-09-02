@@ -10,8 +10,6 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 
 
 
-
-
 const defaultLogin={
   email:"",
   password:""
@@ -45,7 +43,7 @@ const  LoginPage =()=> {
 
 try{
 await  googleSignIn()
-navigate("/dashboard")
+navigate("/")
 }
 catch(error:any){
   console.log(error.code)
@@ -70,7 +68,7 @@ catch(error:any){
     setError("")
     try{
       await loginIn(email,password)
-      navigate("/dashboard")
+      navigate("/")
     }
     catch(error:any){
       switch(error.code)
